@@ -10,7 +10,7 @@ export const getExpensesInScope = ({ expenses, filters }) => {
             case "amount":
                 return expenses.sort((a,b) => a.amount>b.amount?1:a.amount<b.amount?-1:0);
             case "date":
-                return expenses.sort((a,b) => a.createdAt<b.createdAt?1:a.createdAt>b.createdAt?-1:0);
+                return expenses.sort((a,b) => a.createdAt>b.createdAt?1:a.createdAt<b.createdAt?-1:0);
             default:
                 return expenses;
         }
