@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { NavLink } from 'react-router-dom';
 
 export const ListItem = (props) => (
     <div>
@@ -15,7 +16,7 @@ export const ListItem = (props) => (
             </div>
             <div className="panel-footer">
                 <div className="btn-group">
-                    <button type="button" disabled className="btn btn-primary">Edit</button>
+                    <NavLink to={"/edit^"+props.id} className="btn btn-primary">Edit</NavLink>
                     <button type="button" className="btn btn-danger" onClick={props.deleteExpense}>Delete</button>
                 </div>
             </div>

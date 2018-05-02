@@ -5,6 +5,7 @@ import './styles/stylesheet.scss';
 import createStore from "./store/configureStore";
 import * as actions from './actions';
 import { Provider } from 'react-redux';
+import 'react-dates/initialize';
 
 const store = createStore();
 
