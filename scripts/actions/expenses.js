@@ -1,11 +1,12 @@
 import uuid from "uuid";
+import moment from 'moment';
 
 export const addExpense = (
     {
         description= "No description provided, this is a default",
         comments= "No comments provided",
         amount= 0,
-        createdAt= new Date()
+        createdAt= moment()
     } = {}) => (
     {
         type: "ADD_EXPENSE",
@@ -13,7 +14,7 @@ export const addExpense = (
     }
 );
 
-export const editExpense = (id, updates) => ({ type: "EDIT_EXPENSE", id, updates });
+export const editExpense = (updates) => ({ type: "EDIT_EXPENSE", id:updates.id, updates });
 
 export const deleteExpense = ({ id }) => ({ type: "DELETE_EXPENSE", id });
 
