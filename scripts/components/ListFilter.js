@@ -43,15 +43,18 @@ class ListFilter extends React.Component {
                     <DateRangePicker
                         startDate={this.props.filters.startDate}
                         endDate={this.props.filters.endDate}
-                        startDateId="strDtFrmPck"
-                        endDateId="endDtFrmPck"
-                        onDatesChange={(datesRange) => this.props.dispatch(searchBy({
-                        ...this.props.filters,
-                        ...datesRange
-                    }))}
+                        startDateId="startDate"
+                        endDateId="endDate"
+                        onDatesChange={(datesRange) => {
+                            this.props.dispatch(searchBy({
+                                ...this.props.filters,
+                                ...datesRange
+                            }))
+                        }}
                         focusedInput={this.state.focusedInput}
                         onFocusChange={focusedInput => this.setState({focusedInput})}
                         numberOfMonths={1}
+                        showClearDates={true}
                         isOutsideRange={() => false}/>
                 </div>
             </div>
