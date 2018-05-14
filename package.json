@@ -1,12 +1,12 @@
 {
-  "name": "udemy_2nd_tutorial",
+  "name": "react-track-my-expense",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "bundle.js",
   "scripts": {
     "build:dev": "webpack --env development",
     "build:prod": "webpack -p --env production",
-    "heroku-postbuild": "yarn run build:prod",
+    "heroku-postbuild": "npm run-script build:prod",
     "start": "node server.js",
     "start:dev": "webpack-dev-server --hot --env development",
     "start:live-server": "live-server public/",
