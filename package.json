@@ -4,16 +4,19 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "build": "webpack",
-    "start": "webpack-dev-server --hot --env development",
-    "build:production": "webpack -p --env production",
-    "test": "jest --watch",
-    "start-server": "live-server public/"
+    "build:dev": "webpack --env development",
+    "build:prod": "webpack -p --env production",
+    "heroku-postbuild": "yarn run build:prod",
+    "start": "node server.js",
+    "start:dev": "webpack-dev-server --hot --env development",
+    "start:live-server": "live-server public/",
+    "test": "jest --watch"
   },
   "author": "Sri Harsha Sankarasetty",
   "license": "ISC",
   "dependencies": {
     "css-loader": "^0.28.7",
+    "express": "^4.16.3",
     "file-loader": "^1.1.6",
     "img-loader": "^2.0.0",
     "moment": "^2.22.1",
