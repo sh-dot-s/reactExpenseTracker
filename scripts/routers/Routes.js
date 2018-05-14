@@ -8,15 +8,15 @@ import Help from '../components/Help';
 import PageNotFound from '../components/NotFound';
 
 const Header = () => (
-  <nav className="navbar navbar-inverse">
+  <nav className="navbar navbar-default">
     <div className="container-fluid">
       <div className="navbar-header">
         <a className="navbar-brand" href="/">Expensify</a>
       </div>
-      <ul className="nav nav-pills">
-        <li><NavLink to="/" activeClassName='active' exact={true}>Home</NavLink></li>
-        <li><NavLink to="/create" activeClassName='active' exact={true}>Create</NavLink></li>
-        <li><NavLink to="/help" activeClassName='active' exact={true}>Help</NavLink></li>
+      <ul className="nav navbar-nav">
+        <li><NavLink to="/" className='active' exact={true}>Home</NavLink></li>
+        <li><NavLink to="/create" className='active' exact={true}>Create</NavLink></li>
+        <li><NavLink to="/help" className='active' exact={true}>Help</NavLink></li>
       </ul>
     </div>
   </nav>

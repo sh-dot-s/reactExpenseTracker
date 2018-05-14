@@ -14,6 +14,8 @@ store.subscribe(()=> {
     console.log(store.getState());
 });
 
+//Sample Expenses
+
 const expense1 = store.dispatch(actions.addExpense({
     description: "Movie Bill",
     comments: "Amount spent on Avengers: Infinity War + Food + Travel",
