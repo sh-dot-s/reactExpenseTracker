@@ -1,7 +1,6 @@
 import React from 'react';
 import moment from "moment";
 import {SingleDatePicker} from 'react-dates';
-import 'react-dates/lib/css/_datepicker.css';
 
 console.log(moment().format("Do MMMM YYYY, h:mm:ss A"))
 
