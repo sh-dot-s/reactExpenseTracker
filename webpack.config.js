@@ -47,7 +47,8 @@ const dev_config = module.exports = (env,) => {
     plugins: [extractCSS],
     devServer: {
       contentBase: path.join(__dirname, 'public'),
-      historyApiFallback: true
+      historyApiFallback: true,
+      publicPath: '/public/'
     }
   });
 };

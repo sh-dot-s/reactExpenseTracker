@@ -18,7 +18,7 @@ class ListFilter extends React.Component {
                     <div className='col-md-4'>
                         <input
                             type="text"
-                            className="form-control"
+                            className="form-control input-lg"
                             onChange={(e) => {
                             this
                                 .props
@@ -32,7 +32,7 @@ class ListFilter extends React.Component {
                     <div className='col-md-4'>
                         <div className="form-group">
                             <select
-                                className="form-control"
+                                className="form-control input-lg"
                                 id="sortSelector"
                                 onChange={(e) => {
                                 this

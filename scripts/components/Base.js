@@ -15,7 +15,6 @@ class Base extends React.Component {
         <div className="add-bottom-padding">
           <ExpenseListFilter/>
         </div>
-        {console.log(this.props.expenses.length > 0)}
         {!this.props.expenses.length > 0
           ? (
             <blockquote>
@@ -49,6 +48,3 @@ class Base extends React.Component {
 }
 const mapStateToProps = (state) => ({expenses: getExpensesInScope(state)});
 export default connect(mapStateToProps)(Base);
-// {   this     .props     .expenses     .map((expense) => (<ListItem
-// key={expense.id}       deleteExpense={() => {       this         .props
-// .dispatch(deleteExpense({id: expense.id}));     }}{...expense}/>)) }
